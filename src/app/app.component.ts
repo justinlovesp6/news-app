@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',

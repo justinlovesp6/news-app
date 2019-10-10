@@ -1,0 +1,19 @@
+<div class="page-content">
+	    <h4 *ngIf="updating==false">Create</h4>
+	    <h4 *ngIf="updating==true">Edit</h4>
+	    <form [formGroup]="articleForm" (ngSubmit)="submitArticle()">
+		    <div class="create-article-container">
+			  <mat-form-field>
+			    <input matInput placeholder="Title" formControlName="title">
+			  </mat-form-field>
+
+			  <mat-form-field>
+			    <textarea matInput placeholder="Body" formControlName="body" rows="10" cols="5"></textarea>
+			  </mat-form-field>
+			</div>
+		    <mat-card-actions class="add-client-btn">
+		    	<button mat-raised-button color="basic" (click)="closeDialog()">Cancel</button>
+		    	<button type="submit" [disabled]="!articleForm.valid" mat-raised-button color="primary">Submit</button>
+		    </mat-card-actions>
+	    </form>
+</div>

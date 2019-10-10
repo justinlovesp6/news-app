@@ -1,0 +1,35 @@
+<app-header-navbar></app-header-navbar>
+<div class="container">
+	<div class="page-header">
+		<h1>All Articles</h1>
+	</div>
+	<div class="row">
+		<div class="col-lg-3">
+			<label>
+			  Search:
+			  <input type="text" [formControl]="name">
+			</label>
+		</div>
+		<div class="col-lg-3">
+		</div>
+		<div class="col-lg-3">
+		</div>
+		<div class="col-lg-3">
+			<div class="button-row">
+				<button mat-flat-button color="primary" (click)="addArticleBtn()">Add article</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+	  <div class="list-group">
+		  <a class="list-group-item list-group-item-action" *ngFor="let article of allArticles | filter: name.value" (click)="viewArticle(article)">
+		    <div class="d-flex w-100 justify-content-between">
+		      <h5 class="mb-1">{{article.title}}</h5>
+		      <small>3 days ago</small>
+		    </div>
+		    <p class="mb-1">{{article.body | slice:0:20 }}</p>
+		    <small>Donec id elit non mi porta.</small>
+		  </a>
+		</div>
+	</div>
+</div>
