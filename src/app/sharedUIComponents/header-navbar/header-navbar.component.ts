@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderNavbarComponent implements OnInit {
 
-	private currentUser = JSON.parse(sessionStorage.getItem('credentials'));
+	public currentUser = JSON.parse(sessionStorage.getItem('credentials'));
 
   constructor(private router: Router) { if(!this.currentUser){ this.router.navigate(['login']) } }
 

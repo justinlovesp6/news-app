@@ -6,3 +6,10 @@
 .create-article-container > * {
   width: 100%;
 }
+
+div.add-article-btn {
+	text-align: right;
+	button {
+		margin-right: 10px;
+	}
+}

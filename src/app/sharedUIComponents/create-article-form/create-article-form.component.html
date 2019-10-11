@@ -11,9 +11,9 @@
 			    <textarea matInput placeholder="Body" formControlName="body" rows="10" cols="5"></textarea>
 			  </mat-form-field>
 			</div>
-		    <mat-card-actions class="add-client-btn">
+		    <div class="add-article-btn">
 		    	<button mat-raised-button color="basic" (click)="closeDialog()">Cancel</button>
 		    	<button type="submit" [disabled]="!articleForm.valid" mat-raised-button color="primary">Submit</button>
-		    </mat-card-actions>
+		    </div>
 	    </form>
 </div>

@@ -14,7 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 export class AllArticlesComponent implements OnInit {
 
 	name = new FormControl('');
-	private allArticles = [];
+	public allArticles = [];
 
   constructor(private articlesService: ArticlesService, private dialogService: DialogService) { }
 
