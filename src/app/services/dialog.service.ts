@@ -11,7 +11,10 @@ export class DialogService {
 
   public addArticleModal(){
         let config = new MatDialogConfig();
-        let addArticleDialogRef = this.dialog.open(CreateArticleFormComponent, config);
+        let addArticleDialogRef = this.dialog.open(CreateArticleFormComponent, {
+          height: '400px',
+          width: '600px'
+        });
         addArticleDialogRef.componentInstance.addArticleDialog = addArticleDialogRef;
         addArticleDialogRef.componentInstance.updating = false;
     }
