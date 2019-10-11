@@ -15,15 +15,12 @@ export class AllArticlesComponent implements OnInit {
 
 	name = new FormControl('');
 	private allArticles = [];
-	private searchArticle;
 
   constructor(private articlesService: ArticlesService, private dialogService: DialogService) { }
 
   ngOnInit() {
-  	console.log(localStorage.getItem('credentials'));
   	this.articlesService.getAllArticles().subscribe(res => {
   		this.allArticles = res;
-  		console.log(res);
   	});
   }
 

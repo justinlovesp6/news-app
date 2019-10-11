@@ -7,7 +7,8 @@ import { AllArticlesComponent } from './components/all-articles/all-articles.com
 const routes: Routes = [
 	{ path: 'articles', component: AllArticlesComponent },
   	{ path: 'login', component: LoginComponent },
-  	{ path : '', component : LoginComponent }
+  	{ path : '', component : LoginComponent },
+  	{ path: 'lazymodule', loadChildren: './lazymodule/lazymodule.module#LazyModuleModule' }
 ];
 
 @NgModule({
